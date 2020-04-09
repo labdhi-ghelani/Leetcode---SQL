@@ -8,3 +8,12 @@ where s1.parent_id IS NULL
 group by s1.sub_id;
 
 
+First, you filter data for the post_id column where you satisfy the NULL condition and group it
+Second, you figure out the condition to count the number of comments. ie count the number of comments for every post id which you 
+you can get it from the outer query
+Third, you do not want to count the comments based on parent_id. since that would result into 
+{"headers": ["post_id", "number_of_comments"], "values": [[1, 4], [2, 2], [12, 0]]} -> 4,2,0 if you use it without distinct
+Fourth, hence you want to count the DISTINCT sub_id
+                                                                           
+
+
