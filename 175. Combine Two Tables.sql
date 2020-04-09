@@ -1,13 +1,13 @@
 
 My Solution
 
-Explicit Join
+Explicit Join (When you use JOINS)
 
 select p.FirstName, p.LastName, a.City, a.State from Person p left join Address a
 on p.PersonId = a.PersonId ;
 
 Other Solutions
-Implicit Join
+Implicit Join (When you use where clause instead of JOINS)
 
 select a.FIRSTNAME, a.LASTNAME, b.CITY, b.STATE from PERSON a, ADDRESS b where a.PERSONID = b.PERSONID;
 
