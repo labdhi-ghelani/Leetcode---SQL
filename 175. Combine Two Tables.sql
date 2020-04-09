@@ -1,4 +1,3 @@
-
 My Solution
 
 Explicit Join (When you use JOINS)
