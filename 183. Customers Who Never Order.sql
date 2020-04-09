@@ -1,3 +1,4 @@
+
 My Solution:
 
 select c.Name as 'Customers' from Customers c
