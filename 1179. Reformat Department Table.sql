@@ -1,4 +1,3 @@
-
 My Solution
 
 select id, 
