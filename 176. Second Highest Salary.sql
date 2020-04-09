@@ -1,10 +1,10 @@
-#My Submission (Using NOT IN Operator)
+My Submission (Using NOT IN Operator)
 
 select max(Salary) as SecondHighestSalary
 from Employee
 where Salary not in (Select max(Salary) from Employee);
 
-#Other Solutions (Using Sub Query and < Operator)
+Other Solutions (Using Sub Query and < Operator)
 
 select max(salary) as SecondHighestSalary
 from Employee
@@ -19,5 +19,5 @@ SELECT
     NULL) AS SecondHighestSalary
     
 
-#The IFNULL() function returns a specified value if the expression is NULL. 
-#select 100 as sum;
+The IFNULL() function returns a specified value if the expression is NULL. 
+select 100 as sum;
