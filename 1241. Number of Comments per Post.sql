@@ -15,5 +15,9 @@ Third, you do not want to count the comments based on parent_id. since that woul
 {"headers": ["post_id", "number_of_comments"], "values": [[1, 4], [2, 2], [12, 0]]} -> 4,2,0 if you use it without distinct
 Fourth, hence you want to count the DISTINCT sub_id
                                                                            
-
+ Also keep in mind, 
+It is not possible to test for NULL values with comparison operators, such as =, <, or <>.
+We will have to use the IS NULL and IS NOT NULL operators instead.                                                                          
+                                                                           
+                                                                          
 
