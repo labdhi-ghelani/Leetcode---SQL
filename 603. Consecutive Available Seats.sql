@@ -26,5 +26,5 @@ or a.seat_id = b.seat_id-1
 where a.free = 1 and b.free = 1
 order by a.seat_id;
 
-in either of the cases the seats should not be occupied and hence it should satisfy both, a.free = 1 and b.free = 1
+Either of the cases the seats should not be occupied and hence it should satisfy both, a.free = 1 and b.free = 1
 also you would want distinct seats
