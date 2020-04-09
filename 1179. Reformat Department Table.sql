@@ -1,5 +1,4 @@
 
-
 My Solution
 
 select id, 
