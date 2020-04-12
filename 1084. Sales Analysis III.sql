@@ -15,3 +15,8 @@ FROM Product
 WHERE product_id NOT IN (SELECT product_id FROM Sales WHERE sale_date NOT BETWEEN '2019-01-01' AND '2019-03-31');
 
 The second solution is intuitive, smart and fast. 
+
+
+Also, if you are not doing any aggregation of columns in the select clause then
+All column names in SELECT list must appear in GROUP BY
+https://stackoverflow.com/questions/5986127/do-all-columns-in-a-select-list-have-to-appear-in-a-group-by-clause
