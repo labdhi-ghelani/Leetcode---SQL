@@ -5,6 +5,7 @@ from Employee1
 order by employee_id;
 
 Although it generates a syntax error on leetcode but works fine on sql workbench (O_o)
+https://leetcode.com/problems/find-the-team-size/discuss/468768/Simple-three-line-solution
 
 Other smart solution with join and subquery:
 
