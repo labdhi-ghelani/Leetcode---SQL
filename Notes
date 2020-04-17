@@ -1,0 +1,12 @@
+Error: Unkown coolumn in having clause
+The SQL standard requires that HAVING must reference only columns in the GROUP BY clause or columns used in aggregate functions. 
+However, MySQL supports an extension to this behavior, and permits HAVING to refer to columns in the SELECT list and columns in outer subqueries as well
+https://stackoverflow.com/questions/36105812/unknown-column-in-having-clause
+
+
+Can i use max and count together in SQL?
+You can’t. It is not possible to nest aggregate functions like max(count(...))
+It is not allowed to use two aggregate functions in the SELECT statement. 
+The solution is to create a table to get the results from the inner function first, 
+and then use this table for calling the second function on the respective column.
+https://medium.com/@quynh.totuan/can-i-use-max-count-in-sql-433f1e5213b9
