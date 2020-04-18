@@ -10,3 +10,7 @@ It is not allowed to use two aggregate functions in the SELECT statement.
 The solution is to create a table to get the results from the inner function first, 
 and then use this table for calling the second function on the respective column.
 https://medium.com/@quynh.totuan/can-i-use-max-count-in-sql-433f1e5213b9
+
+
+Can i use max() without groupby()?
+https://stackoverflow.com/questions/61283134/can-i-use-max-without-groupby?noredirect=1#comment108413626_61283134
