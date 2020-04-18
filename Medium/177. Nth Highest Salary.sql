@@ -9,9 +9,11 @@ DECLARE M INT;
 SET M=N-1;
   RETURN (
       # Write your MySQL query statement below.
-      SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT M, 1
+      SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET M
   );
 END
+
+https://leetcode.com/problems/nth-highest-salary/discuss/498281/MySQL-OFFSET-by-N-1
 
 select top 1 result.Salary from
 (select Salary, DENSE_RANK() over (order by salary DESC) as dnrank
