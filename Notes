@@ -13,4 +13,5 @@ https://medium.com/@quynh.totuan/can-i-use-max-count-in-sql-433f1e5213b9
 
 
 Can i use max() without groupby()?
+In the absence of a GROUP BY clause aggregation occurs over all rows returned by the query.
 https://stackoverflow.com/questions/61283134/can-i-use-max-without-groupby?noredirect=1#comment108413626_61283134
