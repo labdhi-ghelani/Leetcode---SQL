@@ -21,3 +21,5 @@ MySQL does not have TOP, Use LIMIT instead
 https://stackoverflow.com/questions/42507753/top-keyword-in-sql-is-not-working
 https://www.quora.com/How-do-I-do-select-top-1-in-MySQL
 
+Distinct cannot be used in having clause
+https://stackoverflow.com/questions/29555685/how-to-have-distinct-in-having-clause
