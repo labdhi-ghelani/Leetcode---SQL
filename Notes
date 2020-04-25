@@ -23,3 +23,6 @@ https://www.quora.com/How-do-I-do-select-top-1-in-MySQL
 
 Distinct cannot be used in having clause
 https://stackoverflow.com/questions/29555685/how-to-have-distinct-in-having-clause
+
+Cannot use sum(count())
+https://stackoverflow.com/questions/42135105/sql-sum-result-of-count
