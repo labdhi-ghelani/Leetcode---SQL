@@ -22,3 +22,7 @@ Method 3: Using correlated sub query
  GROUP BY a1.player_id)
  AS games_played_so_far
  FROM activity a1 ORDER BY a1.player_id, games_played_so_far;
+
+refer-1204 : JOIN, sum until a condition is met, for loop, window partition
+Know how the self joining works
+a1.event_date >=a2.event_date
