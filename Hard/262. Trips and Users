@@ -1,0 +1,44 @@
+My solution:
+
+
+select 
+Request_at as Day,
+round(sum(case when Status='completed' then 0 else 1 end) / count(distinct Id),2) as 'Cancellation Rate'
+from Trips
+where (Client_id) not in (select Users_Id
+from Users 
+where  Banned = 'Yes')  and (Driver_id) not in (select Users_Id
+from Users 
+where  Banned = 'Yes') and Request_at between '2013-10-01' and '2013-10-03'
+group by  Request_at
+;
+
+Other Solution:
+
+select
+    Request_at as Day,
+    round(SUM(CASE WHEN Status like 'cancelled%' THEN 1 ELSE 0 END)
+          /count(Status),2) as 'Cancellation Rate'
+from
+    Trips
+where
+    Request_at between '2013-10-01' and '2013-10-03'
+    and
+    Client_id not in (select Users_Id from Users where Banned = 'Yes')
+group by
+    Request_at
+    
+    
+ #Using JOINS (* Imp: Joined Trips with 2 Users table each with specific conditions)
+ 
+SELECT s.Day, ROUND(AVG(s.cancel_count),2) AS "Cancellation Rate"
+FROM
+(SELECT t.Id, CASE WHEN t.Status <> 'completed' THEN 1 ELSE 0 END AS cancel_count, t.Request_at AS Day
+FROM Trips t
+JOIN Users u1
+ON t.Client_Id = u1.Users_Id
+JOIN Users u2
+ON t.Driver_Id = u2. Users_Id
+WHERE u1.Banned = 'No' AND u2.Banned = 'No' AND t.Request_at BETWEEN '2013-10-01' AND '2013-10-03') s
+GROUP BY s.Day
+ORDER BY s.Day
